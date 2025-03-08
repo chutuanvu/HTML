@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VFlight</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/signup.css" />
+  <link rel="shortcut icon" href="/image/logo.webp" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <nav class="top">
+      <div class="left">
+        <img src="/image/logo.webp" alt="logo" style="margin-left: 16px; width: 40px" />
+      </div>
+      <div class="right">
+        <ul>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li class="dropdown">
+            <a class="dropbtn">Hỗ trợ
+              <img src="/image/chevrondown.png" alt="" style="width: 15px" /></a>
+            <div class="dropdown-content">
+              <a href="#">Trợ giúp</a>
+              <a href="#">Liên hệ với chúng tôi</a>
+            </div>
+          </li>
+          <li><a href="#">Hợp tác với chúng tôi</a></li>
+          <li><a href="#">Đặt chỗ của tôi</a></li>
+          <li class="signin">
+            <a id="openSignin">Đăng nhập</a>
+          </li>
+          <li class="signup">
+            <a id="openSignup">Đăng ký</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="bot">
+      <ul class="">
+        <li><a href="#">Khách sạn</a></li>
+        <li><a href="/VeMayBay.html">Vé máy bay</a></li>
+        <li><a href="#">Vé xe khách</a></li>
+        <li><a href="#">Đưa đón sân bay</a></li>
+        <li><a href="#">Cho thuê xe</a></li>
+        <li><a href="#">Hoạt động & Vui chơi</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="id01" class="modal">
+      <form action="" class="modal-content">
+        <div class="content">
+          <div class="label">
+            <h1>Đăng ký</h1>
+            <span class="close" id="closeSignup">&times;</span>
+          </div>
+          <label for="user">Tên người dùng</label>
+          <input id="ip-user" type="text" placeholder="Tên người dùng" name="user" />
+          <p id="user"></p>
+          <label for="email">Email</label>
+          <input id="ip-email" type="text" placeholder="yourname@gmail.com" name="email" />
+          <p id="email"></p>
+          <label for="phone">Số điện thoại</label>
+          <input id="ip-phone" type="text" placeholder="+84123456789" name="phone" />
+          <p id="phone"></p>
+          <label for="gender">Giới tính</label>
+          <select name="gender" id="gender">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+          </select>
+          <label for="dob">Ngày sinh</label>
+          <input type="date" name="dob" value="2004-06-02" />
+          <button type="button" id="addPassword">Đăng ký</button>
+        </div>
+      </form>
+    </div>
+    <div id="id02" class="modal">
+      <form action="" class="modal-content">
+        <div class="content">
+          <div class="label">
+            <h1>Đăng ký</h1>
+            <span class="close" id="closeSignupPassword">×</span>
+          </div>
+          <label for="user">Tên người dùng đã được xác minh</label>
+          <input id="ip-user2" type="text" placeholder="Tên người dùng" name="user" readonly />
+          <label for="password">Tạo mật khẩu</label>
+          <input type="password" name="password" id="ip-password" />
+          <p id="password"></p>
+          <button type="submit" id="signup" disabled>Đăng ký</button>
+        </div>
+      </form>
+    </div>
+    <div id="id03" class="modal3">
+      <form action="" class="modal3-content">
+        <div class="content">
+          <div class="label">
+            <h1>Đăng nhập</h1>
+            <span class="close" id="closeSignin">&times;</span>
+          </div>
+          <label for="user">Tên người dùng</label>
+          <input id="signinUser" type="text" placeholder="Tên người dùng" name="user" />
+          <p id="userSignin"></p>
+          <button type="button" class="continue" id="continue">
+            <div class="loader" id="loader"></div>
+            <p id="pContinue">Tiếp tục</p>
+          </button>
+          <div class="signinPassword" id="signinPassword">
+            <label for="password">Mật khẩu </label>
+            <input type="password" name="password" id="passwordSignin" placeholder="************" />
+            <p id="password"></p>
+            <button type="button" class="signinForm" id="signinForm">
+              Đăng nhâp
+            </button>
+            <p class="forgorPassword"><a href="#">Quên mật khẩu?</a></p>
+          </div>
+          <p class="orSigninWith">hoặc đăng nhập với</p>
+          <button type="button" class="signinWithGoogle">
+            <img src="/image/google.png" alt="" />Tiếp tục với Google
+          </button>
+          <button type="button" class="signinWithFacebook">
+            <img src="/image/facebook.png" alt="" />Tiếp tục với Facebook
+          </button>
+        </div>
+        <p class="private">
+          Bằng cách đăng ký, bạn đồng ý với
+          <a href="#">Điều khoản & Điều kiện</a> của chúng tôi và bạn đã đọc
+          <a href="#">Chính Sách Quyền Riêng Tư</a> của chúng tôi.
+        </p>
+      </form>
+    </div>
+    <div class="slideshow">
+      <div class="mySlides fade" style="display: block">
+        <img src="/image/hanoi.png" />
+        <div class="text">Hanoi</div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <img src="/image/hochiminh.png" />
+        <div class="text">Ho Chi Minh City</div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <img src="/image/danang.png" />
+        <div class="text">Da Nang</div>
+      </div>
+      <div class="mySlides fade" style="display: none">
+        <img src="/image/nhatrang.png" />
+        <div class="text">Nha Trang</div>
+      </div>
+      <div class="control">
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+    <div class="partners">
+      <div class="airline-partners">
+        <div class="text-section">
+          <h2>Đối tác hàng không</h2>
+          <p>
+            Đối tác hàng không nội địa và quốc tế <br />
+            <br />
+            Những đối tác hàng không toàn cầu sẽ chắp cánh đưa bạn đến mọi địa
+            điểm trên thế giới.
+          </p>
+        </div>
+        <div class="logo-section">
+          <div><img src="/image/Airlines/vietjet.webp" alt="vietjet" /></div>
+          <div><img src="/image/Airlines/bamboo.webp" alt="bambo" /></div>
+          <div><img src="/image/Airlines/vietnam.webp" alt="vietnam" /></div>
+          <div>
+            <img src="/image/Airlines/vietravel.webp" alt="vietravel" />
+          </div>
+          <div>
+            <img src="/image/Airlines/shenzhen.webp" alt="shenzhen" />
+          </div>
+          <div><img src="/image/Airlines/pacific.webp" alt="pacific" /></div>
+          <div>
+            <img src="/image/Airlines/thailion.webp" alt="thailion" />
+          </div>
+          <div><img src="/image/Airlines/nok.webp" alt="nok" /></div>
+          <div><img src="/image/Airlines/scoot.webp" alt="scoot" /></div>
+          <div>
+            <img src="/image/Airlines/singapore.webp" alt="singapore" />
+          </div>
+          <div>
+            <img src="/image/Airlines/malaysia.webp" alt="malaysia" />
+          </div>
+          <div><img src="/image/Airlines/cathay.webp" alt="cathay" /></div>
+          <div><img src="/image/Airlines/cebu.webp" alt="cebu" /></div>
+          <div>
+            <img src="/image/Airlines/emirates.webp" alt="emirates" />
+          </div>
+          <div><img src="/image/airlines/thai.webp" alt="thai" /></div>
+        </div>
+      </div>
+      <div class="payment-partners">
+        <div class="text-section">
+          <h2>Đối tác thanh toán</h2>
+          <p>
+            Những đối tác thanh toán đáng tin cậy của chúng tôi sẽ giúp cho
+            bạn luôn an tâm thực hiện mọi giao dịch một cách thuận lợi nhất!
+          </p>
+        </div>
+        <div class="logo-section">
+          <div>
+            <img src="/image/payment/matercard.webp" alt="MasterCard" />
+          </div>
+          <div><img src="/image/payment/jcb.webp" alt="JCB" /></div>
+          <div><img src="/image/payment/visa.webp" alt="Visa" /></div>
+          <div>
+            <img src="/image/payment/vietcom.webp" alt="Vietcombank" />
+          </div>
+          <div>
+            <img src="/image/payment/techcom.webp" alt="Techcombank" />
+          </div>
+          <div><img src="/image/payment/onepay.webp" alt="OnePay" /></div>
+          <div><img src="/image/payment/payoo.webp" alt="Payoo" /></div>
+          <div>
+            <img src="/image/payment/standardchartered.webp" alt="Standard Chartered" />
+          </div>
+          <div>
+            <img src="/image/payment/familymart.webp" alt="FamilyMart" />
+          </div>
+          <div>
+            <img src="/image/payment/mediamart.webp" alt="MediaMart" />
+          </div>
+          <div><img src="/image/payment/bsmart.webp" alt="BsMart" /></div>
+          <div><img src="/image/payment/circlek.webp" alt="Circle K" /></div>
+          <div><img src="/image/payment/cocomart.webp" alt="CocoMart" /></div>
+          <div>
+            <img src="/image/payment/didongviet.webp" alt="Didongviet.vn" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-book">
+      <h2>Tại sao nên đặt vé máy bay &amp; phòng khách sạn tại VFlight?</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="/image/search.png" alt="Search Icon" />
+          <h2>Kết quả tìm kiếm bao quát</h2>
+          <p>
+            Chỉ với một cú nhấp chuột, dễ dàng so sánh các chuyến bay của
+            Vietnam Airlines, Jetstar, Vietjet và các chặng bay quốc tế khác
+            với 100,000 đường bay ở châu Á Thái Bình Dương và châu Âu.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="/image/payment.png" alt="Payment Icon" />
+          <h2>Phương thức thanh toán an toàn và linh hoạt</h2>
+          <p>
+            Giao dịch trực tuyến an toàn với nhiều lựa chọn như thanh toán tại
+            cửa hàng tiện lợi, chuyển khoản ngân hàng, thẻ tín dụng đến
+            Internet paymenting.
+          </p>
+        </div>
+      </div>
+      <h3>Tại sao nên đặt vé máy bay với VFlight?</h3>
+      <p>
+        Thỏa sức vi vu cùng VFlight siêu ứng dụng du lịch và tiện ích sống -
+        Giải pháp đặt vé máy bay trực tuyến trọn gói
+      </p>
+      <button class="more">Xem thêm</button>
+    </div>
+    <div class="popular-route">
+      <h2 id="route">Điểm đến phổ biến</h2>
+      <div class="route">
+        <ul>
+          <li>Vé máy bay đi Đà Nẵng</li>
+          <li><a href="HaNoi.html">Vé máy bay đi Hà Nội</a></li>
+          <li>Vé máy bay đi Vinh</li>
+          <li>Vé máy bay đi Singapore</li>
+          <li>Vé máy bay đi Hong Kong</li>
+        </ul>
+        <ul>
+          <li>Vé máy bay đi Phú Quốc</li>
+          <li>Vé máy bay đi Đà Lạt</li>
+          <li>Vé máy bay đi Hải Phòng</li>
+          <li>Vé máy bay đi Sài Gòn</li>
+          <li>Vé máy bay đi Bali</li>
+        </ul>
+        <ul>
+          <li>Vé máy bay đi Nha Trang</li>
+          <li>Vé máy bay đi Huế</li>
+          <li>Vé máy bay đi Côn Đảo</li>
+          <li>Vé máy bay đi Bangkok</li>
+          <li>Vé máy bay đi Kuala Lumpur</li>
+        </ul>
+      </div>
+    </div>
+    <div class="popular-destination">
+      <h2>Chặng bay hàng đầu</h2>
+      <div class="destination">
+        <ul>
+          <li>Vé máy bay Sài Gòn - Hà Nội</li>
+          <li>Vé máy bay Sài Gòn - Nha Trang</li>
+          <li>Vé máy bay Hà Nội - Phú Quốc</li>
+          <li>Vé máy bay Hà Nội - Đà Lạt</li>
+          <li>Vé máy bay Hồ Chí Minh - Bangkok</li>
+        </ul>
+        <ul>
+          <li>Vé máy bay Sài Gòn - Đà Nẵng</li>
+          <li>Vé máy bay Sài Gòn - Đà Lạt</li>
+          <li>Vé máy bay Hà Nội - Đà Nẵng</li>
+          <li>Vé máy bay Đà Nẵng - Hà Nội</li>
+          <li>Vé máy bay Hồ Chí Minh - Singapore</li>
+        </ul>
+        <ul>
+          <li>Vé máy bay Sài Gòn - Phú Quốc</li>
+          <li>Vé máy bay Hà Nội - Sài Gòn</li>
+          <li>Vé máy bay Hà Nội - Nha Trang</li>
+          <li>Vé máy bay Đà Nẵng - Sài Gòn</li>
+          <li>Vé máy bay Hà Nội - Bangkok</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="section">
+      <img src="/image/logo.webp" alt="logo" class="logo" />\<br />
+      <button class="partner-button">Hợp tác với chúng tôi</button>
+      <h1 style="color: #ffff">Đối tác thanh toán</h1>
+      <div class="payment">
+        <div>
+          <img src="/image/payment/matercard.webp" alt="MasterCard" />
+        </div>
+        <div><img src="/image/payment/visa.webp" alt="Visa" /></div>
+        <div><img src="/image/payment/jcb.webp" alt="ACB" /></div>
+        <div><img src="/image/payment/onepay.webp" alt="Agripayment" /></div>
+        <div><img src="/image/payment/payoo.webp" alt="BIDV" /></div>
+        <div><img src="/image/payment/vietcom.webp" alt="MSBpayment" /></div>
+        <div><img src="/image/payment/citima.webp" alt="Sacompayment" /></div>
+        <div><img src="/image/payment/bsmart.webp" alt="SHB" /></div>
+        <div>
+          <img src="/image/payment/circlek.webp" alt="circlek" />
+        </div>
+        <div><img src="/image/payment/colon.webp" alt="Vietinpayment" /></div>
+        <div>
+          <img src="/image/payment/longhung.webp" alt="Vietcompayment" />
+        </div>
+        <div>
+          <img src="/image/payment/cocomart.webp" alt="Vietinpayment" />
+        </div>
+        <div>
+          <img src="/image/payment/familymart.webp" alt="VPpayment" />
+        </div>
+      </div>
+    </div>
+    <div class="about">
+      <h3>Về VFlight</h3>
+      <ul>
+        <li><a href="#">Cách đặt chỗ</a></li>
+        <li><a href="#">Liên hệ chúng tôi</a></li>
+        <li><a href="#">Trợ giúp</a></li>
+        <li><a href="#">Tuyển dụng</a></li>
+        <li><a href="#">Về chúng tôi</a></li>
+        <li><a href="#">Tính năng mới ra mắt</a></li>
+      </ul>
+    </div>
+    <div class="products">
+      <h3>Sản phẩm</h3>
+      <ul>
+        <li><a href="#">Khách sạn</a></li>
+        <li><a href="/VeMayBay.html">Vé máy bay</a></li>
+        <li><a href="#">Vé xe khách</a></li>
+        <li><a href="#">Đưa đón sân bay</a></li>
+        <li><a href="#">Cho thuê xe</a></li>
+        <li><a href="#">Hoạt động &amp; Vui chơi</a></li>
+        <li><a href="#">Du thuyền</a></li>
+        <li><a href="#">Biệt thự</a></li>
+        <li><a href="#">Căn hộ</a></li>
+      </ul>
+    </div>
+    <div class="others">
+      <h3>Khác</h3>
+      <ul>
+        <li><a href="#">Chính Sách Quyền Riêng</a></li>
+        <li><a href="#">Điều khoản &amp; Điều kiện</a></li>
+        <li><a href="#">Quy chế hoạt động</a></li>
+        <li><a href="#">Đăng ký nơi nghỉ của bạn</a></li>
+        <li>
+          <a href="#">Đăng ký doanh nghiệp hoạt động du lịch của bạn</a>
+        </li>
+        <li><a href="#">Khu vực báo chí</a></li>
+        <li><a href="#">Vulnerability Disclosure Program</a></li>
+      </ul>
+    </div>
+    <div class="follow-us">
+      <h3>Theo dõi chúng tôi trên</h3>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/chutuanvu0206"><img src="/image/Facebook.png" alt="" />Facebook</a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/chutuanvu0206"><img src="/image/Instagram.png" alt="" />Instagram</a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@chutuanvu0206"><img src="/image/TikTok.png" alt="" />TikTok</a>
+        </li>
+        <li>
+          <a href="https://youtube.com/@chutuanvu2004"><img src="/image/youtube.png" alt="" />YouTube</a>
+        </li>
+        <li>
+          <a href="https://t.me/chutuanvu0206"><img src="image/telegram.png" alt="" />Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/js/scripts.js"></script>
+  <script src="/js/signup.js"></script>
+</body>
+
+</html>

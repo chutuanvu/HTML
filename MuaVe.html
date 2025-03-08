@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VFlight - Mua vé</title>
+    <link rel="stylesheet" href="/css/MuaVe.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="shortcut icon" href="/image/logo.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="top">
+        <div class="left">
+          <img
+            src="/image/logo.webp"
+            alt="logo"
+            style="margin-left: 16px; width: 40px"
+          />
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li class="dropdown">
+              <a class="dropbtn"
+                >Hỗ trợ
+                <img src="/image/chevrondown.png" alt="" style="width: 15px"
+              /></a>
+              <div class="dropdown-content">
+                <a href="#">Trợ giúp</a>
+                <a href="#">Liên hệ với chúng tôi</a>
+              </div>
+            </li>
+            <li><a href="#">Hợp tác với chúng tôi</a></li>
+            <li><a href="#">Đặt chỗ của tôi</a></li>
+            <li class="signin">
+              <a id="openSignin">Đăng nhập</a>
+            </li>
+            <li class="signup">
+              <a id="openSignup">Đăng ký</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="bot">
+        <ul class="">
+          <li><a href="#">Khách sạn</a></li>
+          <li><a href="/VeMayBay.html">Vé máy bay</a></li>
+          <li><a href="#">Vé xe khách</a></li>
+          <li><a href="#">Đưa đón sân bay</a></li>
+          <li><a href="#">Cho thuê xe</a></li>
+          <li><a href="#">Hoạt động & Vui chơi</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="id01" class="modal">
+        <form action="" class="modal-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng ký</h1>
+              <span class="close" id="closeSignup">&times;</span>
+            </div>
+            <label for="user">Tên người dùng</label>
+            <input
+              id="ip-user"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+            />
+            <p id="user"></p>
+            <label for="email">Email</label>
+            <input
+              id="ip-email"
+              type="text"
+              placeholder="yourname@gmail.com"
+              name="email"
+            />
+            <p id="email"></p>
+            <label for="phone">Số điện thoại</label>
+            <input
+              id="ip-phone"
+              type="text"
+              placeholder="+84123456789"
+              name="phone"
+            />
+            <p id="phone"></p>
+            <label for="gender">Giới tính</label>
+            <select name="gender" id="gender">
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+            </select>
+            <label for="dob">Ngày sinh</label>
+            <input type="date" name="dob" value="2004-06-02" />
+            <button type="button" id="addPassword">Đăng ký</button>
+          </div>
+        </form>
+      </div>
+      <div id="id02" class="modal">
+        <form action="" class="modal-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng ký</h1>
+              <span class="close" id="closeSignupPassword">×</span>
+            </div>
+            <label for="user">Tên người dùng đã được xác minh</label>
+            <input
+              id="ip-user2"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+              readonly
+            />
+            <label for="password">Tạo mật khẩu</label>
+            <input type="password" name="password" id="ip-password" />
+            <p id="password"></p>
+            <button type="submit" id="signup" disabled>Đăng ký</button>
+          </div>
+        </form>
+      </div>
+      <div id="id03" class="modal3">
+        <form action="" class="modal3-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng nhập</h1>
+              <span class="close" id="closeSignin">&times;</span>
+            </div>
+            <label for="user">Tên người dùng</label>
+            <input
+              id="signinUser"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+            />
+            <p id="userSignin"></p>
+            <button type="button" class="continue" id="continue">
+              <div class="loader" id="loader"></div>
+              <p id="pContinue">Tiếp tục</p>
+            </button>
+            <div class="signinPassword" id="signinPassword">
+              <label for="password">Mật khẩu </label>
+              <input
+                type="password"
+                name="password"
+                id="passwordSignin"
+                placeholder="************"
+              />
+              <p id="password"></p>
+              <button type="button" class="signinForm" id="signinForm">
+                Đăng nhâp
+              </button>
+              <p class="forgorPassword"><a href="#">Quên mật khẩu?</a></p>
+            </div>
+            <p class="orSigninWith">hoặc đăng nhập với</p>
+            <button type="button" class="signinWithGoogle">
+              <img src="/image/google.png" alt="" />Tiếp tục với Google
+            </button>
+            <button type="button" class="signinWithFacebook">
+              <img src="/image/facebook.png" alt="" />Tiếp tục với Facebook
+            </button>
+          </div>
+          <p class="private">
+            Bằng cách đăng ký, bạn đồng ý với
+            <a href="#">Điều khoản & Điều kiện</a> của chúng tôi và bạn đã đọc
+            <a href="#">Chính Sách Quyền Riêng Tư</a> của chúng tôi.
+          </p>
+        </form>
+      </div>
+      <div id="popup" class="popup">
+        <div class="popup-header">
+          <div>
+            <span class="close" id="close-popup">&times;</span>
+            <h1>Chuyến đi của bạn</h1>
+          </div>
+          <div>
+            <img src="/image/bookmark.png" alt="" /><img
+              src="/image/share.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="popup-main">
+          <div class="popup-main-content">
+            <h1 style="text-align: left">
+              Hưng Yên → Đà Nẵng | Thứ 3, 25 06 2024
+            </h1>
+            <div class="flight-info">
+              <div class="airline">
+                <img src="/image/flight.png" alt="" width="24px" />
+                <div>VietJet Air</div>
+              </div>
+              <div class="flight-times">
+                <div>Khởi hành: 19:35 GMT+7</div>
+                <div style="color: #687176">Ước tính: 25h 20m, 1 điểm dừng</div>
+                <div>Kết thúc : 19:55 GMT+7 (+1 ngày)</div>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="visa">
+                <p style="color: #235d9f">Có thể cần visa quá cảnh</p>
+              </div>
+              <div>Chi tiết</div>
+            </div>
+          </div>
+          <div class="popupChosse">
+            <h2 style="text-align: left">Chọn loại vé của bạn</h2>
+            <div class="popupChosseContent">
+              <div>
+                <div class="popChosseHeader">
+                  <img src="image/normal.webp" alt="" />
+                  <h2>Nguyên bản</h2>
+                  <p id="tien">1.258.641 VND</p>
+                  <h1>/khách</h1>
+                </div>
+                <div class="popupChosseMain">
+                  <p>
+                    <img src="/image/hanhly.webp" alt="" />Hành lý xách tay 1 x
+                    7 kg
+                  </p>
+                  <p>
+                    <img src="/image/doilich.webp" alt="" />Chi phí đổi lịch bay
+                    của hãng hàng không VND 378,000
+                  </p>
+                  <p class="disabled">
+                    <img src="/image/kygui.webp" alt="" />Hành lý ký gửi 0 Kg
+                  </p>
+                  <p class="disabled">
+                    <img src="/image/hoantien.webp" alt="" />Hoàn tiền không có
+                    sẵn
+                  </p>
+                  <p class="disabled">
+                    Không có bảo hiểm du lịch & Bảo vệ hành lý
+                  </p>
+                </div>
+                <div class="popChosseFooter">
+                  <div>
+                    <img src="/image/1.webp" alt="" /><img
+                      src="/image/2.webp"
+                      alt=""
+                    /><img src="/image/3.webp" alt="" /><img
+                      src="/image/4.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <button type="button">Xem chi tiết</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popupChosseContent">
+              <div>
+                <div class="popChosseHeader">
+                  <img src="image/safe.webp" alt="" />
+                  <h2>An toàn</h2>
+                  <p id="tien">1.453.777 VND</p>
+                  <h1>/khách</h1>
+                </div>
+                <div class="popupChosseMain">
+                  <p>
+                    <img src="/image/hanhly.webp" alt="" />Hành lý xách tay 1 x
+                    7 kg
+                  </p>
+                  <p>
+                    <img src="/image/doilich.webp" alt="" />Chi phí đổi lịch bay
+                    của hãng hàng không VND 378,000
+                  </p>
+                  <p class="enable">
+                    <img src="/image/hoantien.webp" alt="" />Hoàn 80% giá vé ban
+                    đầu
+                  </p>
+                  <p class="enable">Bảo hiểm du lịch & Bảo vệ hành lý</p>
+                  <p class="disabled">
+                    <img src="/image/kygui.webp" alt="" />Hành lý ký gửi 0 Kg
+                  </p>
+                </div>
+                <div class="popChosseFooter">
+                  <div>
+                    <img src="/image/1.webp" alt="" /><img
+                      src="/image/2.webp"
+                      alt=""
+                    /><img src="/image/3.webp" alt="" /><img
+                      src="/image/4.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <button type="button">Xem chi tiết</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popupChosseContent">
+              <div>
+                <div class="popChosseHeader">
+                  <img src="image/vip.webp" alt="" />
+                  <h2>Economy Flex</h2>
+                  <p id="tien">1.631.349 VND</p>
+                  <h1>/khách</h1>
+                </div>
+                <div class="popupChosseMain">
+                  <p>
+                    <img src="/image/hanhly.webp" alt="" />Hành lý xách tay 1 x
+                    7 kg
+                  </p>
+                  <p>
+                    <img src="/image/doilich.webp" alt="" />Chi phí đổi lịch bay
+                    của hãng hàng không VND 378,000
+                  </p>
+                  <p>
+                    <img src="/image/hoantien.webp" alt="" />Phí hoàn vé bắt đầu
+                    từ VND 378,000
+                  </p>
+                  <p class="disabled">
+                    <img src="/image/kygui.webp" alt="" />Hành lý ký gửi 0 Kg
+                  </p>
+                  <p class="disabled">
+                    Không có bảo hiểm du lịch & Bảo vệ hành lý
+                  </p>
+                </div>
+                <div class="popChosseFooter">
+                  <div>
+                    <img src="/image/1.webp" alt="" /><img
+                      src="/image/2.webp"
+                      alt=""
+                    /><img src="/image/3.webp" alt="" /><img
+                      src="/image/4.webp"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <button type="button">Xem chi tiết</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <div>
+            <p>Tổng cộng cho 1 khách hàng</p>
+            <h1 style="color: #ff5e1f" id="tongtien">3.301.071 VND</h1>
+          </div>
+          <div>
+            <button type="button" id="continuetobook">Tiếp tục đặt chỗ</button>
+          </div>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="flight-content">
+          <div class="flight-info">
+            <div class="airline">
+              <img src="/image/flight.png" alt="" width="24px" />
+              <div>Bamboo Airlines</div>
+            </div>
+            <div class="flight-times">
+              <div>Khởi hành: 12:35 GMT+7</div>
+              <div style="color: #687176">Ước tính: 35h 20m, 2 điểm dừng</div>
+              <div>Kết thúc : 12:55 GMT+7 (+2 ngày)</div>
+            </div>
+            <div class="flight-price">
+              <div style="color: #666; text-decoration: line-through">
+                1,319,449 VND
+              </div>
+              <div style="color: #ff5e1f">1,301,071 VND/khách</div>
+            </div>
+          </div>
+          <div class="visa">
+            <p style="color: #235d9f">Vé sinh viên</p>
+          </div>
+          <div class="control">
+            <ul>
+              <li>Chi tiết</li>
+              <li>Giá vé & Quyền lợi</li>
+              <li>Hoàn vé</li>
+              <li>Đổi lịch</li>
+              <li>Khuyến mãi</li>
+              <li>
+                <button class="open-popup" style="border-radius: 10px">
+                  Chọn
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flight-content">
+          <div class="flight-info">
+            <div class="airline">
+              <img src="/image/flight.png" alt="" width="24px" />
+              <div>VietJet Air</div>
+            </div>
+            <div class="flight-times">
+              <div>Khởi hành: 19:35 GMT+7</div>
+              <div style="color: #687176">Ước tính: 25h 20m, 1 điểm dừng</div>
+              <div>Kết thúc : 19:55 GMT+7 (+1 ngày)</div>
+            </div>
+            <div class="flight-price">
+              <div style="color: #666; text-decoration: line-through">
+                3,319,449 VND
+              </div>
+              <div style="color: #ff5e1f">3,301,071 VND/khách</div>
+            </div>
+          </div>
+          <div class="visa">
+            <p style="color: #235d9f">Có thể cần visa quá cảnh</p>
+          </div>
+          <div class="control">
+            <ul>
+              <li>Chi tiết</li>
+              <li>Giá vé & Quyền lợi</li>
+              <li>Hoàn vé</li>
+              <li>Đổi lịch</li>
+              <li>Khuyến mãi</li>
+              <li>
+                <button class="open-popup" style="border-radius: 10px">
+                  Chọn
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flight-content">
+          <div class="flight-info">
+            <div class="airline">
+              <img src="/image/flight.png" alt="" width="24px" />
+              <div>VietNam Airlines</div>
+            </div>
+            <div class="flight-times">
+              <div>Khởi hành: 12:35 GMT+7</div>
+              <div style="color: #687176">Ước tính: 15h 20m, 0 điểm dừng</div>
+              <div>Kết thúc : 22:55 GMT+7</div>
+            </div>
+            <div class="flight-price">
+              <div style="color: #666; text-decoration: line-through">
+                4,319,449 VND
+              </div>
+              <div style="color: #ff5e1f">4,301,071 VND/khách</div>
+            </div>
+          </div>
+          <div class="visa">
+            <p style="color: #235d9f">Có thể cần visa quá cảnh</p>
+          </div>
+          <div class="control">
+            <ul>
+              <li>Chi tiết</li>
+              <li>Giá vé & Quyền lợi</li>
+              <li>Hoàn vé</li>
+              <li>Đổi lịch</li>
+              <li>Khuyến mãi</li>
+              <li>
+                <button class="open-popup" style="border-radius: 10px">
+                  Chọn
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/js/MuaVe.js"></script>
+  <script src="/js/signup.js"></script>
+</html>

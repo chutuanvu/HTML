@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VFlight - Vé máy bay</title>
+    <link rel="stylesheet" href="/css/VeMayBay.css" />
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="shortcut icon" href="/image/logo.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="top">
+        <div class="left">
+          <img
+            src="/image/logo.webp"
+            alt="logo"
+            style="margin-left: 16px; width: 40px"
+          />
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li class="dropdown">
+              <a class="dropbtn"
+                >Hỗ trợ
+                <img src="/image/chevrondown.png" alt="" style="width: 15px"
+              /></a>
+              <div class="dropdown-content">
+                <a href="#">Trợ giúp</a>
+                <a href="#">Liên hệ với chúng tôi</a>
+              </div>
+            </li>
+            <li><a href="#">Hợp tác với chúng tôi</a></li>
+            <li><a href="#">Đặt chỗ của tôi</a></li>
+            <li class="signin">
+              <a id="openSignin">Đăng nhập</a>
+            </li>
+            <li class="signup">
+              <a id="openSignup">Đăng ký</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="bot">
+        <ul class="">
+          <li><a href="#">Khách sạn</a></li>
+          <li><a href="/VeMayBay.html">Vé máy bay</a></li>
+          <li><a href="#">Vé xe khách</a></li>
+          <li><a href="#">Đưa đón sân bay</a></li>
+          <li><a href="#">Cho thuê xe</a></li>
+          <li><a href="#">Hoạt động & Vui chơi</a></li>
+          <li><a href="#">More</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="id01" class="modal">
+        <form action="" class="modal-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng ký</h1>
+              <span class="close" id="closeSignup">&times;</span>
+            </div>
+            <label for="user">Tên người dùng</label>
+            <input
+              id="ip-user"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+            />
+            <p id="user"></p>
+            <label for="email">Email</label>
+            <input
+              id="ip-email"
+              type="text"
+              placeholder="yourname@gmail.com"
+              name="email"
+            />
+            <p id="email"></p>
+            <label for="phone">Số điện thoại</label>
+            <input
+              id="ip-phone"
+              type="text"
+              placeholder="+84123456789"
+              name="phone"
+            />
+            <p id="phone"></p>
+            <label for="gender">Giới tính</label>
+            <select name="gender" id="gender">
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
+            </select>
+            <label for="dob">Ngày sinh</label>
+            <input type="date" name="dob" value="2004-06-02" />
+            <button type="button" id="addPassword">Đăng ký</button>
+          </div>
+        </form>
+      </div>
+      <div id="id02" class="modal">
+        <form action="" class="modal-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng ký</h1>
+              <span class="close2" id="closeSignupPassword">×</span>
+            </div>
+            <label for="user">Tên người dùng đã được xác minh</label>
+            <input
+              id="ip-user2"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+              readonly
+            />
+            <label for="password">Tạo mật khẩu</label>
+            <input type="password" name="password" id="ip-password" />
+            <p id="password"></p>
+            <button type="submit" id="signup" disabled>Đăng ký</button>
+          </div>
+        </form>
+      </div>
+      <div id="id03" class="modal3">
+        <form action="" class="modal3-content">
+          <div class="content">
+            <div class="label">
+              <h1>Đăng nhập</h1>
+              <span class="close" id="closeSignin">&times;</span>
+            </div>
+            <label for="user">Tên người dùng</label>
+            <input
+              id="signinUser"
+              type="text"
+              placeholder="Tên người dùng"
+              name="user"
+            />
+            <p id="userSignin"></p>
+            <button type="button" class="continue" id="continue">
+              <div class="loader" id="loader"></div>
+              <p id="pContinue">Tiếp tục</p>
+            </button>
+            <div class="signinPassword" id="signinPassword">
+              <label for="password">Mật khẩu </label>
+              <input
+                type="password"
+                name="password"
+                id="passwordSignin"
+                placeholder="************"
+              />
+              <p id="password"></p>
+              <button type="button" class="signinForm" id="signinForm">
+                Đăng nhâp
+              </button>
+              <p class="forgorPassword"><a href="#">Quên mật khẩu?</a></p>
+            </div>
+            <p class="orSigninWith">hoặc đăng nhập với</p>
+            <button type="button" class="signinWithGoogle">
+              <img src="/image/google.png" alt="" />Tiếp tục với Google
+            </button>
+            <button type="button" class="signinWithFacebook">
+              <img src="/image/facebook.png" alt="" />Tiếp tục với Facebook
+            </button>
+          </div>
+          <p class="private">
+            Bằng cách đăng ký, bạn đồng ý với
+            <a href="#">Điều khoản & Điều kiện</a> của chúng tôi và bạn đã đọc
+            <a href="#">Chính Sách Quyền Riêng Tư</a> của chúng tôi.
+          </p>
+        </form>
+      </div>
+      <div id="id04" class="modal">
+        <form action="" class="modal-content">
+          <div class="content">
+            <div class="label">
+              <h1>Thêm</h1>
+              <span class="close" id="closeAddFlight">&times;</span>
+            </div>
+            <div class="flight">
+              <div class="start">
+                <label for="start">Điểm xuất phát</label>
+                <input type="text" name="start" id="start" />
+              </div>
+              <div class="end">
+                <label for="end">Điểm đến</label>
+                <input type="text" name="end" id="end" />
+              </div>
+            </div>
+            <div class="airline">
+              <div class="lb">
+                <label for="airline">Hãng hàng không</label>
+                <input type="text" name="airline" id="airline" />
+              </div>
+              <div class="img">
+                <img id="airline-img" src="" alt="" style="max-width: 50px" />
+              </div>
+            </div>
+
+            <label for="schedule">Lịch bay</label>
+            <input
+              type="date"
+              name="schedule"
+              id="schedule"
+              value="2024-06-15"
+            />
+            <label for="price">Giá từ (VND)</label>
+            <input type="text" name="price" id="price" />
+            <button type="button" id="addFlightData">Thêm</button>
+          </div>
+        </form>
+      </div>
+      <div class="search">
+        <div class="searchHeader">
+          <button>Vé máy bay</button>
+          <button>Đưa đón sân bay</button>
+        </div>
+        <form class="flight-form">
+          <div>
+            <label for="from">Từ</label>
+            <input type="text" id="from" value="Hungyen (HUY)" />
+          </div>
+          <div>
+            <label for="to">Đến</label>
+            <input type="text" id="to" value="Hanoi (HAN)" />
+          </div>
+          <div>
+            <label for="date">Ngày đi</label>
+            <input type="date" id="date" value="2024-06-16" />
+          </div>
+          <div>
+            <label for="passengers">Số hành khách</label>
+            <input
+              type="text"
+              id="passengers"
+              value="1 Người lớn, 0 Trẻ em, 0 Em bé"
+            />
+          </div>
+          <div>
+            <label for="class">Hạng ghế</label>
+            <input type="text" id="class" value="Phổ thông" />
+          </div>
+          <div class="submit-button">
+            <button type="submit">Tìm chuyến bay</button>
+          </div>
+        </form>
+      </div>
+      <div class="flight-deals">
+        <div class="control">
+          <h2>
+            VFlight giúp bạn tìm thấy nhiều chuyến bay giá rẻ và khuyến mãi
+          </h2>
+          <button class="add-flight" id="addFlight">Thêm chuyến bay</button>
+        </div>
+        <table id="flights-table">
+          <tr>
+            <th>Chặng bay</th>
+            <th>Hãng hàng không</th>
+            <th>Lịch bay</th>
+            <th>Giá từ</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Hưng Yên → Hà Nội</td>
+            <td>
+              <img src="/image/airlines/vietjet.webp" alt="Vietjet Air" />
+              Vietjet Air
+            </td>
+            <td>Thứ Sáu, 28 thg 6 2024</td>
+            <td>1.485.448 VND</td>
+            <td>
+              <button class="book">Đặt ngay</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Đà Nẵng → Hà Nội</td>
+            <td>
+              <img
+                src="image/airlines/vietravel.webp"
+                alt="Vietravel Airlines"
+              />
+              Vietravel Airlines
+            </td>
+            <td>Thứ Sáu, 12 thg 7 2024</td>
+            <td>744.678 VND</td>
+            <td>
+              <div>
+                <button class="book">Đặt ngay</button>
+                <button class="delete">Xóa</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Điện Biên → Hà Nội</td>
+            <td>
+              <img src="image/airlines/vietnam.webp" alt="Vietnam Airlines" />
+              Vietnam Airlines
+            </td>
+            <td>Thứ Năm, 11 thg 7 2024</td>
+            <td>1.005.600 VND</td>
+            <td>
+              <button class="book">Đặt ngay</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Nha Trang → Hà Nội</td>
+            <td>
+              <img src="image/airlines/bamboo.webp" alt="bamboo" />
+              Bamboo Airlines
+            </td>
+            <td>Thứ Hai, 6 thg 7 2024</td>
+            <td>1.245.856 VND</td>
+            <td>
+              <button class="book">Đặt ngay</button>
+              <button class="delete">Xóa</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <div class="section">
+        <img src="/image/logo.webp" alt="logo" class="logo" />\<br />
+        <button class="partner-button">Hợp tác với chúng tôi</button>
+        <h1 style="color: #ffff">Đối tác thanh toán</h1>
+        <div class="payment">
+          <div>
+            <img src="/image/payment/matercard.webp" alt="MasterCard" />
+          </div>
+          <div><img src="/image/payment/visa.webp" alt="Visa" /></div>
+          <div><img src="/image/payment/jcb.webp" alt="ACB" /></div>
+          <div><img src="/image/payment/onepay.webp" alt="Agripayment" /></div>
+          <div><img src="/image/payment/payoo.webp" alt="BIDV" /></div>
+          <div><img src="/image/payment/vietcom.webp" alt="MSBpayment" /></div>
+          <div><img src="/image/payment/citima.webp" alt="Sacompayment" /></div>
+          <div><img src="/image/payment/bsmart.webp" alt="SHB" /></div>
+          <div>
+            <img src="/image/payment/circlek.webp" alt="circlek" />
+          </div>
+          <div><img src="/image/payment/colon.webp" alt="Vietinpayment" /></div>
+          <div>
+            <img src="/image/payment/longhung.webp" alt="Vietcompayment" />
+          </div>
+          <div>
+            <img src="/image/payment/cocomart.webp" alt="Vietinpayment" />
+          </div>
+          <div>
+            <img src="/image/payment/familymart.webp" alt="VPpayment" />
+          </div>
+        </div>
+      </div>
+      <div class="about">
+        <h3>Về Traveloka</h3>
+        <ul>
+          <li><a href="#">Cách đặt chỗ</a></li>
+          <li><a href="#">Liên hệ chúng tôi</a></li>
+          <li><a href="#">Trợ giúp</a></li>
+          <li><a href="#">Tuyển dụng</a></li>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tính năng mới ra mắt</a></li>
+        </ul>
+      </div>
+      <div class="products">
+        <h3>Sản phẩm</h3>
+        <ul>
+          <li><a href="#">Khách sạn</a></li>
+          <li><a href="#">Vé máy bay</a></li>
+          <li><a href="#">Vé xe khách</a></li>
+          <li><a href="#">Đưa đón sân bay</a></li>
+          <li><a href="#">Cho thuê xe</a></li>
+          <li><a href="#">Hoạt động &amp; Vui chơi</a></li>
+          <li><a href="#">Du thuyền</a></li>
+          <li><a href="#">Biệt thự</a></li>
+          <li><a href="#">Căn hộ</a></li>
+        </ul>
+      </div>
+      <div class="others">
+        <h3>Khác</h3>
+        <ul>
+          <li><a href="#">Chính Sách Quyền Riêng</a></li>
+          <li><a href="#">Điều khoản &amp; Điều kiện</a></li>
+          <li><a href="#">Quy chế hoạt động</a></li>
+          <li><a href="#">Đăng ký nơi nghỉ của bạn</a></li>
+          <li>
+            <a href="#">Đăng ký doanh nghiệp hoạt động du lịch của bạn</a>
+          </li>
+          <li><a href="#">Khu vực báo chí</a></li>
+          <li><a href="#">Vulnerability Disclosure Program</a></li>
+        </ul>
+      </div>
+      <div class="follow-us">
+        <h3>Theo dõi chúng tôi trên</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/chutuanvu020604"
+              ><img src="/image/Facebook.png" alt="" />Facebook</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/chutuanvu020604/"
+              ><img src="/image/Instagram.png" alt="" />Instagram</a
+            >
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@chutuanvu020604"
+              ><img src="/image/TikTok.png" alt="" />TikTok</a
+            >
+          </li>
+          <li>
+            <a href="https://youtube.com/@chutuanvu2004"
+              ><img src="/image/youtube.png" alt="" />YouTube</a
+            >
+          </li>
+          <li>
+            <a href="https://t.me/chutuanvu020604"
+              ><img src="image/telegram.png" alt="" />Telegram</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="/js/VeMayBay.js"></script>
+    <script src="/js/signup.js"></script>
+  </body>
+</html>
